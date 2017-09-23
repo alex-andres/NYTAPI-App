@@ -23,3 +23,11 @@ p{
 .buttonText{
     font-family: 'Oswald', sans-serif;
 }
+#search-section{
+    background-color: rgba(255, 255, 255, .55);
+    padding: 25px;
+    border-radius: 10px
+}
+#button-row{
+    align-content: center;
+}

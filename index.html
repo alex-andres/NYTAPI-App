@@ -22,12 +22,13 @@
         </div>
 
         <!----------------- Search section-->
-        <div class = "row">
+        <div class = "row" id="search-section">
+            
             <div class="col-2"></div>
             <div class="col-8">
             <!-- Search form inside here-->
+                <h1 class="h1Titles">  <i class="fa fa-search mr-2"></i>Search Parameters </h1>
                 <form class=" buttonText">
-                    <h1 class="h1Titles">  <i class="fa fa-search mr-2"></i>Search Parameters </h1><hr>
                     <div class="form-group ">
                         <label for="SearchTerm" class="pb-1">Search Term:</label>
                         <input type="text" class="form-control" id="SearchTerm"  placeholder="Enter a search term">
@@ -48,9 +49,12 @@
                         <label for="EndYear" class="pb-1">End Year (Optional):</label>
                         <input type="text" class="form-control" id="EndYear"  placeholder="Enter an end year">
                     </div>
-
-                    <button type="submit" class="btn btn-primary">Search</button>
-                    <button type="submit" class="btn btn-primary">Clear Results</button>
+                    <div class="row" id="button-row">
+                        <div class="col text-center">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                            <button type="submit" class="btn btn-primary">Clear Results</button>
+                        </div>
+                    </div>
                 </form>
             <!-- Results -->
 
