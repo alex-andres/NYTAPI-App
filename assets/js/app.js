@@ -8,7 +8,7 @@ var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 		var begin_date;
 		var end_date = 2000;
 
-		if (begin_date > 0) {
+		if (begin_date > 1850 && begin_date < 2017) {
 			begin_date.toString;
 			begin_date += "0101";
 
@@ -20,24 +20,24 @@ var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
 		}
 
-			if (end_date > 0) {
+			if (end_date > begin_date && end < 2017) {
 				end_date.toString;
 				end_date += "1231";
 
 		{
-			$.param[3] = {"begin_date" : begin_date};
+			$.param[3] = {"end_date" : end_date};
 		}
 
 		url += $.param[3];
 
 		}
 
-		else if (end_date > 0) {
+		else if (end_date > 1851 && end_date < 2017) {
 				end_date.toString;
 				end_date += "1231";
 
 		{
-			$.param[2] = {"begin_date" : begin_date};
+			$.param[2] = {"end_date" : end_date};
 		}
 
 		url += $.param[2];
