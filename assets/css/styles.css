@@ -12,7 +12,10 @@ h1{
     /*border-radius: 25px 25px 0px 0px;*/
 
 }
-
+p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
 .h1Titles{
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
