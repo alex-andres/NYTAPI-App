@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>New York Times Search App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Six+Caps|Tenor+Sans|PT+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <script src="https://use.fontawesome.com/0f97643179.js"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
     <script src="http://d309knd7es5f10.cloudfront.net/zim_6.1.1.js"></script>
@@ -15,25 +15,58 @@
     <div class = "container">
 
         <!------------------- Header -->
-        <div class = "row py-5 " >
+        <div class = "row py-5" >
             <div class = "col text-center">
                 <img src="assets/images/The_New_York_Times_logo.png" width="526" height="77">
             </div>
         </div>
 
-
         <!----------------- Search section-->
         <div class = "row">
+            <div class="col-2"></div>
+            <div class="col-8">
+            <!-- Search form inside here-->
+                <form class=" buttonText">
+                    <h1 class="h1Titles">  <i class="fa fa-search mr-2"></i>Search Parameters </h1><hr>
+                    <div class="form-group ">
+                        <label for="SearchTerm" class="pb-1">Search Term:</label>
+                        <input type="text" class="form-control" id="SearchTerm"  placeholder="Enter a search term">
+                    </div>
+                    <div class="form-group">
+                        <label for="RecordsToRetrieve" class="pb-1">Number of Records to Retrieve:</label>
+                        <select class="form-control" id="RecordsToRetrieve">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="StartYear" class="pb-1">Start Year (Optional):</label>
+                        <input type="text" class="form-control" id="StartYear"  placeholder="Enter a start year">
+                    </div>
+                    <div class="form-group">
+                        <label for="EndYear" class="pb-1">End Year (Optional):</label>
+                        <input type="text" class="form-control" id="EndYear"  placeholder="Enter an end year">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary">Clear Results</button>
+                </form>
+            <!-- Results -->
+
+                <h1 class="h1Titles pt-5"> <i class="fa fa-bullhorn mr-2"></i>Top Articles </h1><hr>
+                    <div id="TileOfArticle" class ="p1"></div> <!-- Put title of the article here -->
+                    <div class ="p1"></div><!-- Not sure what we're putting here -->
+                    <div class ="p1"></div><!-- Not sure what we're putting here -->
+
+            </div><!-- end -->
+             <div class="col-2 pb-3"></div>
         </div>
 
 
-        <!----------------- Results section -->
-        <div class = "row">
-
         </div>
 
-
-    </div><!--END of container-->
+   </div><!--END of container-->
 </body>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"

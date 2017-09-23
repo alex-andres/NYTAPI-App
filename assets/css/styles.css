@@ -1,7 +1,22 @@
-body{
+/*body{*/
 
-    background-image: url(../images/carli-jeen-430.jpg);
-    background-size: 100%;
+    /*background-image: url(../images/carli-jeen-430.jpg);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-attachment: fixed;*/
+/*}*/
+h1{
+    font-family: 'Oswald', sans-serif;
+    /*background-color: greenyellow;*/
+    /*border-radius: 25px 25px 0px 0px;*/
 
+}
 
+.h1Titles{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+.buttonText{
+    font-family: 'Oswald', sans-serif;
 }
