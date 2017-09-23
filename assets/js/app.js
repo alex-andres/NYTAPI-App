@@ -2,7 +2,7 @@ console.log("Hello world!");
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 		url += '?' + $.param({
   		'api-key': "b9f91d369ff59547cd47b931d8cbc56b:0:74623931",
-  		'q': "Snow Leopards",
+  		'q': "Snow",
   		
 });
 		var begin_date;
@@ -20,7 +20,7 @@ var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
 		}
 
-			if (end_date > begin_date && end < 2017) {
+			if (end_date > begin_date && end_date < 2017) {
 				end_date.toString;
 				end_date += "1231";
 
@@ -45,7 +45,11 @@ var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 		}
 
 			
-		var queryResults = 5;
+		var queryResults = 15;
+
+var articleObject = "";
+
+if (queryResults > 10) {
 
 $.ajax({
   url: url,
@@ -53,7 +57,7 @@ $.ajax({
 }).done(function(result) {
   console.log(result);
 
-  for (var i = 0; i < queryResults; i++) {
+for (var i = 0; i < 10; i++) {
   	console.log(result.response.docs[i].headline.main);
   	console.log(result.response.docs[i].web_url)
   	console.log(result.response.docs[i].snippet)
@@ -61,3 +65,42 @@ $.ajax({
 }).fail(function(err) {
   throw err;
 });
+
+$.param[3] = {"page" : 11};
+		
+
+		url += $.param[3];
+
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+
+for (var i = 0; i < queryResults-10; i++) {
+  	console.log(result.response.docs[i].headline.main);
+  	console.log(result.response.docs[i].web_url)
+  	console.log(result.response.docs[i].snippet)
+  }
+}).fail(function(err) {
+  throw err;
+});
+
+}
+
+else {
+	$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+
+for (var i = 0; i < 10; i++) {
+  	console.log(result.response.docs[i].headline.main);
+  	console.log(result.response.docs[i].web_url)
+  	console.log(result.response.docs[i].snippet)
+  }
+}).fail(function(err) {
+  throw err;
+});
+}
